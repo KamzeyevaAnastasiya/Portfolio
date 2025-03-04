@@ -14,7 +14,7 @@ export const Contacts = () => {
                     <Menu menuItems={contactsItems}/>
                 </div>
                 <div>
-                <Title>Subscribe to my emailing list</Title>
+                    <Title>Subscribe to my emailing list</Title>
                     <StyledForm>
                         <Field placeholder={"Enter your email"}/>
                         <Button>Subscribe</Button>
