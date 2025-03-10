@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { Theme } from "./Theme";
 
 export const GlobalStyle = createGlobalStyle`
     *,
@@ -29,5 +30,13 @@ export const GlobalStyle = createGlobalStyle`
     button {
         background-color: unset;
         border: none;
+    }
+
+    section:nth-of-type(odd) {
+        background-color: ${Theme.colors.primaryBg};
+    }
+
+    section:nth-of-type(even) {
+        background-color: ${Theme.colors.secondaryBg};
     }
 `
