@@ -41,7 +41,6 @@ const Button = styled.button`
     font-family: "Epilogue", sans-serif;
     font-weight: 400;
     font-size: 16px;
-    line-height: 1.5;
     color: ${Theme.colors.mainFn};
     margin-left: 32px;
 `
