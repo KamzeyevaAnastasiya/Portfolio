@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import photo from '../../../assets/images/myPhoto.webp'
 import { FlexWrapper } from '../../../components/FlexWrapper';
-import { SectionTitle } from '../../../components/SectionTitle'
 import { Container } from '../../../components/Container';
 import { MainTitle } from '../../../components/h1/H1';
+import { Theme } from '../../../styles/Theme';
 
 export const Main = () => {
     return (
@@ -24,7 +24,7 @@ export const Main = () => {
 const StyledMain = styled.section`
     min-height: 100vh;
     display: flex;
-    padding: 200px 105px 105px 175px;
+    padding: 115px 105px 100px;
 `
 
 const Photo = styled.img`
@@ -33,4 +33,11 @@ const Photo = styled.img`
     object-fit: cover;
     transform: rotate(8deg);
     opacity: 0.9;
+`
+
+const SectionTitle = styled.h2`
+    font-family: "Epilogue", sans-serif;
+    font-weight: 800;
+    font-size: 70px;
+    color: ${Theme.colors.primaryFn};
 `
