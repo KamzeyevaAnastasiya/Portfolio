@@ -1,15 +1,15 @@
 import styled from "styled-components"
-import { SectionTitle } from "../../../components/SectionTitle"
 import { FlexWrapper } from "../../../components/FlexWrapper"
 import { Work } from "./work/Work"
 import healthImg from '../../../assets/images/proj-1.webp'
 import fashionImg from '../../../assets/images/proj-2.webp'
 import barbequeImg from '../../../assets/images/proj-3.webp'
+import { Theme } from "../../../styles/Theme"
 
 export const Works = () => {
     return (
         <StyledWorks>
-            <SectionTitle>MY PROJECTS</SectionTitle>
+            <WorksTitle>MY PROJECTS</WorksTitle>
             <FlexWrapper direction={"column"}>
                 <Work src={healthImg} 
                 category={"Mental Health"} 
@@ -31,6 +31,12 @@ export const Works = () => {
 };
 
 const StyledWorks = styled.section`
-    min-height: 100vh;
-    background-color: #b2ebf1;
+    
+`
+
+const WorksTitle = styled.h2`
+    font-family: "Epilogue", sans-serif;
+    font-weight: 800;
+    font-size: 70px;
+    color: ${Theme.colors.primaryFn};
 `
