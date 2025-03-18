@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { Menu } from "./contactsMenu/ContactsMenu"
+import { ContactsMenu } from "./contactsMenu/ContactsMenu"
 import { Logo } from "../../../components/logo/Logo"
 import { FlexWrapper } from "../../../components/FlexWrapper"
 
@@ -11,7 +11,7 @@ export const Contacts = () => {
             <FlexWrapper justify="space-between">
                 <div>
                     <Logo/>
-                    <Menu menuItems={contactsItems}/>
+                    <ContactsMenu menuItems={contactsItems}/>
                 </div>
                 <div>
                     <Title>Subscribe to my emailing list</Title>

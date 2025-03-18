@@ -1,8 +1,8 @@
 import styled from "styled-components"
 
-export const Menu = (props: {menuItems: Array<string>}) => {
+export const ContactsMenu = (props: {menuItems: Array<string>}) => {
     return (
-        <StyledMenu>
+        <StyledContactsMenu>
             <ul>
                 {props.menuItems.map((item:string, index:number)=>{
                     return <li key={index}>
@@ -10,11 +10,11 @@ export const Menu = (props: {menuItems: Array<string>}) => {
                     </li>
                 })}
             </ul>
-        </StyledMenu>
+        </StyledContactsMenu>
     );
 };
 
-const StyledMenu = styled.nav`
+const StyledContactsMenu = styled.nav`
     ul {
         display: flex;
         gap: 32px;
