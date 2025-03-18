@@ -40,4 +40,10 @@ export const GlobalStyle = createGlobalStyle`
     section:nth-of-type(even) {
         background-color: ${Theme.colors.secondaryBg};
     }
+
+    h5 {
+        font-family: "Epilogue", sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+    }
 `
