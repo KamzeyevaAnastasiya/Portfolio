@@ -34,7 +34,7 @@ const Category = styled.div`
     
 `
 
-const Title = styled.h3`
+const Title = styled.h5`
     
 `
 
