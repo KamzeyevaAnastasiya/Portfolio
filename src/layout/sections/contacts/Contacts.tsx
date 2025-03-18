@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { Menu } from "../../../components/menu/Menu"
+import { Menu } from "./contactsMenu/ContactsMenu"
 import { Logo } from "../../../components/logo/Logo"
 import { FlexWrapper } from "../../../components/FlexWrapper"
 
