@@ -15,7 +15,7 @@ export const Header = () => {
                     <Logo/>
                     <FlexWrapper align={"center"}>
                         <HeaderMenu menuItems={items}/>
-                        <Button>Let’s Talk</Button>
+                        <Button><Link href="">Let’s Talk</Link></Button>
                     </FlexWrapper>
                 </FlexWrapper>
             </Container>
@@ -38,9 +38,12 @@ const Button = styled.button`
     padding: 8px 20px;
     width: 111px;
     height: 40px;
+        margin-left: 32px;
+`
+
+const Link = styled.a`
     font-family: "Epilogue", sans-serif;
     font-weight: 400;
     font-size: 16px;
     color: ${Theme.colors.mainFn};
-    margin-left: 32px;
 `
