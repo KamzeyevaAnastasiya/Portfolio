@@ -51,6 +51,7 @@ const Photo = styled.img`
     object-fit: cover;
     transform: rotate(8deg);
     opacity: 0.9;
+    z-index: 0;
 `
 
 const SectionTitle = styled.h2`
