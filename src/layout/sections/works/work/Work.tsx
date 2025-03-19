@@ -42,14 +42,24 @@ const Category = styled.h5`
 `
 
 const TitlePart1 = styled.h3`
-    
+    font-family: "Epilogue", sans-serif;
+    font-weight: 200;
+    font-size: 45px;
+    color: ${Theme.colors.mainFn};
 `
 
 const TitlePart2 = styled.h3`
-    
+    font-family: "Epilogue", sans-serif;
+    font-weight: 800;
+    font-size: 45px;
+    color: ${Theme.colors.mainFn};
 `
 
 const Text = styled.p`
-    
+    font-family: "Epilogue", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: ${Theme.colors.mainFn};
 `
 
