@@ -6,9 +6,9 @@ export const StyledButton = () => {
     return (
         <StyledBtn>
             <Text>View More</Text>
-            <a href="">
+            <Link href="">
                 <Icon iconId={'more'}  width={'16'} height={'16'} viewBox={'0 0 16 16'}></Icon> 
-            </a>
+            </Link>
         </StyledBtn>
     );
 };
@@ -17,6 +17,11 @@ const StyledBtn = styled.p`
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
+    width: 105px;
+    height: 40px;
+    gap: 4px;
+    padding: 8px 0px;
 `
 
 const Text = styled.p`
@@ -25,4 +30,9 @@ const Text = styled.p`
     font-size: 16px;
     line-height: 1.5;
     color: ${Theme.colors.mainFn};
+`
+
+const Link = styled.a`
+    width: 16px;
+    height: 16px;
 `
