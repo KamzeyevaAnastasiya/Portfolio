@@ -13,7 +13,9 @@ type WorkPropsType = {
 export const Work = (props: WorkPropsType) => {
     return (
         <StyledWork>
-            <Image src={props.src} alt=""/>
+            <ImageWrapper>
+                <Image src={props.src} alt=""/>
+            </ImageWrapper>
             <Category>{props.category}</Category>
             <TitlePart1>{props.titlePart1}</TitlePart1>
             <TitlePart2>{props.titlePart2}</TitlePart2>
@@ -27,8 +29,23 @@ const StyledWork = styled.div`
     margin-top: 80px;
 `
 
+const ImageWrapper = styled.div`
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.8);
+        opacity: 0.6;
+    }
+`
+
 const Image = styled.img`
-    width: 1040px;
+    width: 100%;
     height: 447px;
     object-fit: cover;
 `
