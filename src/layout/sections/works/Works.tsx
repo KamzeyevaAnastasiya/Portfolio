@@ -11,21 +11,24 @@ export const Works = () => {
     return (
         <StyledWorks>
             <Container>
-                <WorksTitle>MY PROJECTS</WorksTitle>
+                <WorksTitle>MY<br/>PROJECTS</WorksTitle>
                 <FlexWrapper direction={"column"}>
                     <Work src={healthImg} 
                     category={"Mental Health"} 
-                    title={"A Case Study_Find Peace in Meditation"} 
+                    titlePart1={"A Case Study_"}
+                    titlePart2={"Find Peace in Meditation"}
                     text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."}/>
                     
                     <Work src={fashionImg} 
                     category={"Fashion Show"} 
-                    title={"A Case Study_Enjoy Fashion Shows From Home"} 
+                    titlePart1={"A Case Study_"} 
+                    titlePart2={"Enjoy Fashion Shows From Home"}
                     text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."}/>
                     
                     <Work src={barbequeImg} 
                     category={"Barbeque"} 
-                    title={"Branding_Chicken Barbeque Never Goes Wrong"} 
+                    titlePart1={"Branding_"}
+                    titlePart2={"Chicken Barbeque Never Goes Wrong"}
                     text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."}/>
                 </FlexWrapper>
             </Container>
@@ -34,12 +37,13 @@ export const Works = () => {
 };
 
 const StyledWorks = styled.section`
-    
+    padding: 140px 200px 160px;
 `
 
 const WorksTitle = styled.h2`
     font-family: "Epilogue", sans-serif;
     font-weight: 800;
-    font-size: 70px;
+    font-size: 120px;
+    line-height: 0.9;
     color: ${Theme.colors.primaryFn};
 `
