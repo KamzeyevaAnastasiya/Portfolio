@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Icon } from '../icon/Icon';
+import { Theme } from '../../styles/Theme';
 
 export const StyledButton = () => {
     return (
@@ -19,7 +20,9 @@ const StyledBtn = styled.p`
 `
 
 const Text = styled.p`
+    font-family: "Epilogue", sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
+    color: ${Theme.colors.mainFn};
 `
