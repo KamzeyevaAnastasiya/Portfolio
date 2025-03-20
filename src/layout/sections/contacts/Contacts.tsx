@@ -31,7 +31,7 @@ export const Contacts = () => {
 }
 
 const StyledContacts = styled.section`
-    padding: 80px 108px 64px;
+    padding: 80px 200px 64px;
 `
 
 const Title = styled.h5`
@@ -82,6 +82,7 @@ const Button = styled.button`
     font-size: 16px;
     line-height: 1.5;
     color: ${Theme.colors.secondaryFn};
+    cursor: pointer;
 `
 
 const Text = styled.p`
