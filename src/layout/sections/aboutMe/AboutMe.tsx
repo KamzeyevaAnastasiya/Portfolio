@@ -8,7 +8,7 @@ export const AboutMe = () => {
     return (
         <StyledAbout>
             <Container>
-                <FlexWrapper justify="space-around">
+                <FlexWrapper justify="space-between">
                     <div>
                         <Title>About Me</Title>
                         <Slogan>I look at usual <br/> things with my <br/> unsual eyes.</Slogan>
@@ -28,7 +28,7 @@ export const AboutMe = () => {
 
 const StyledAbout = styled.section`
     min-height: 1470px;
-    padding: 110px 64px 205px;
+    padding: 110px 200px 205px;
 
     position: relative;
 `
@@ -70,7 +70,7 @@ const Image = styled.img`
     object-fit: cover;
     
     position: absolute;
-    right: 800px;
+    right: 760px;
     bottom: 410px;
 `
 
@@ -79,7 +79,7 @@ const SecondImage = styled(Image)`
     height: 411px;
     
     position: absolute;
-    right: 195px;
+    right: 200px;
     bottom: 205px;
 `
 
