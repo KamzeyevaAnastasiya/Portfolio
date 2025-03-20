@@ -7,5 +7,6 @@ export const Theme = {
         primaryFn: "#2D2C2C",
         secondaryFn: "#000000",
         h1Fn: "#0D0F16",
+        aboutFn: "#f2f2f2",
     }
 }
