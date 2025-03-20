@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import { Icon } from "../../components/icon/Icon";
 import { FlexWrapper } from "../../components/FlexWrapper";
+import { Theme } from "../../styles/Theme";
 
 export const Footer = () => {
     return (
         <StyledFooter>
             <FlexWrapper justify={"space-between"}>
-                <Copyright>2022 Relume. All right reserved.</Copyright>
+                <Copyright>2025 Anastasiya Kamzeyeva. All rights reserved.</Copyright>
                 <SocialList>
                     <SocialItem>
                         <SocialLink>
@@ -38,8 +39,16 @@ export const Footer = () => {
 };
 
 const StyledFooter = styled.footer`
-    background-color: #def9c4;
-    min-height: 20vh;
+    background-color: ${Theme.colors.primaryBg};
+    padding: 64px 200px 55px;
+`
+
+const Copyright = styled.small`
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    color: ${Theme.colors.secondaryFn};
 `
 
 const SocialList = styled.ul`
@@ -52,8 +61,6 @@ const SocialItem = styled.li`
 `
 
 const SocialLink = styled.a`
-    
-`
-
-const Copyright = styled.small`
+    color: ${Theme.colors.secondaryFn};
+    cursor: pointer;
 `
