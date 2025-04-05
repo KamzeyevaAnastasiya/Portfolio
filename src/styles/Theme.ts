@@ -9,6 +9,8 @@ export const Theme = {
         h1Fn: "#0D0F16",
         aboutFn: "#f2f2f2",
         inputFn: "#505050",
+        
+        burgerCr: "#292D32",
     },
 
     media: {
