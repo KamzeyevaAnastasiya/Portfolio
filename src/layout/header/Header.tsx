@@ -4,6 +4,7 @@ import { HeaderMenu } from "../../layout/header/headerMenu/HeaderMenu";
 import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { Theme } from "../../styles/Theme";
+import { MobileMenu } from "./mobileMenu/MobileMenu";
 
 const items = ["Projects", "About", "Digital Assets"]
 
@@ -13,9 +14,10 @@ export const Header = () => {
             <Container>
                 <FlexWrapper justify={"space-between"} align={"center"}>
                     <Logo/>
-                    <FlexWrapper align={"center"}>
+                    <FlexWrapper align={"center"} >
                         <HeaderMenu menuItems={items}/>
                         <Button><Link href="">Let’s Talk</Link></Button>
+                        <MobileMenu menuItems={items}/>
                     </FlexWrapper>
                 </FlexWrapper>
             </Container>
@@ -38,7 +40,11 @@ const Button = styled.button`
     padding: 8px 20px;
     width: 111px;
     height: 40px;
-        margin-left: 32px;
+    margin-left: 32px;
+
+    @media ${Theme.media.tablet} {
+        margin-right: 15px;
+    }
 `
 
 const Link = styled.a`
