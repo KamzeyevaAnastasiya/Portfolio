@@ -9,5 +9,10 @@ export const Theme = {
         h1Fn: "#0D0F16",
         aboutFn: "#f2f2f2",
         inputFn: "#505050",
+    },
+
+    media: {
+        tablet: "screen and (max-width: 768px)",
+        mobile: "screen and (max-width: 576px)",
     }
 }
