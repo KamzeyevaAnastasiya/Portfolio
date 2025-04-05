@@ -2,6 +2,7 @@ export const Theme = {
     colors: {
         primaryBg: "#ffffff",
         secondaryBg: "#131212",
+        burgerBg: "#f1f1f1",
         
         mainFn: "#ffffff",
         primaryFn: "#2D2C2C",
@@ -11,6 +12,7 @@ export const Theme = {
         inputFn: "#505050",
         
         burgerCr: "#292D32",
+        burgerOpenCr: "#4f4f4f",
     },
 
     media: {
