@@ -33,6 +33,10 @@ const StyledHeader = styled.header`
     right: 0;
     left: 0%;
     z-index: 99999;
+
+    @media ${Theme.media.tablet} {
+        padding: 20px 105px;
+    }
 `
 
 const Button = styled.button`
@@ -43,7 +47,7 @@ const Button = styled.button`
     margin-left: 32px;
 
     @media ${Theme.media.tablet} {
-        margin-right: 15px;
+        margin-right: 25px;
     }
 `
 
