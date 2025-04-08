@@ -35,10 +35,18 @@ export const GlobalStyle = createGlobalStyle`
 
     section:nth-of-type(odd) {
         background-color: ${Theme.colors.primaryBg};
+
+        @media ${Theme.media.mobile} {
+            padding: 20px 10px;
+        }
     }
 
     section:nth-of-type(even) {
         background-color: ${Theme.colors.secondaryBg};
+
+        @media ${Theme.media.mobile} {
+            padding: 20px 10px;
+        }
     }
 
     h5 {
