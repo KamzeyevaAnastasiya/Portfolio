@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { Icon } from "../../components/icon/Icon";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { Theme } from "../../styles/Theme";
+import { Icon } from "../../components/icon/Icon";
 
 export const Footer = () => {
     return (
@@ -20,13 +20,13 @@ export const Footer = () => {
                             <Icon height={"24"} width={"24"} viewBox={"0 0 24 24"} iconId={"instagram"}/>
                         </SocialLink>
                     </SocialItem>
-
+        
                     <SocialItem>
                         <SocialLink>
                             <Icon height={"24"} width={"24"} viewBox={"0 0 24 24"} iconId={"twitter"}/>
                         </SocialLink>
                     </SocialItem>
-
+        
                     <SocialItem>
                         <SocialLink>
                             <Icon height={"24"} width={"24"} viewBox={"0 0 24 24"} iconId={"linkediIn"}/>
@@ -54,6 +54,7 @@ const Copyright = styled.small`
 const SocialList = styled.ul`
     display: flex;
     gap: 12px;
+
 `
 
 const SocialItem = styled.li`
