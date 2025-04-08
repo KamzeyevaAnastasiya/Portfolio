@@ -31,11 +31,15 @@ const StyledHeader = styled.header`
     position: fixed;
     top: 0;
     right: 0;
-    left: 0%;
+    left: 0;
     z-index: 99999;
 
     @media ${Theme.media.tablet} {
         padding: 20px 105px;
+    }
+
+    @media ${Theme.media.mobile} {
+        padding: 20px;
     }
 `
 
@@ -49,6 +53,11 @@ const Button = styled.button`
     @media ${Theme.media.tablet} {
         margin-right: 25px;
     }
+
+    @media ${Theme.media.mobile} {
+        width: 107px;
+        height: 39px;
+    }
 `
 
 const Link = styled.a`
@@ -56,4 +65,8 @@ const Link = styled.a`
     font-weight: 400;
     font-size: 16px;
     color: ${Theme.colors.mainFn};
+
+    @media ${Theme.media.mobile} {
+        font-size: 15px;
+    }
 `
