@@ -5,11 +5,12 @@ import { Icon } from "../../../components/icon/Icon";
 export const MobileMenu = (props: {menuItems: Array<string>}) => {
     return (
         <StyledMobileMenu>
-            <BurgerButton isOpen={true}>
+            <BurgerButton isOpen={false}>
                 <span></span>
             </BurgerButton>
-                
-            <MobileMenuPopup isOpen={true}>
+            
+            <MenuWrapper isOpen={false}>
+                <MobileMenuPopup isOpen={false}>
                 <ul>
                     {props.menuItems.map((item:string, index:number)=>{
                         return <ListItem key={index}>
@@ -20,9 +21,9 @@ export const MobileMenu = (props: {menuItems: Array<string>}) => {
                         })
                     }
                 </ul>
-            </MobileMenuPopup>
+                </MobileMenuPopup>
 
-            <SocialList isOpen={true}>
+                <SocialList isOpen={false}>
                 <SocialItem>
                     <SocialLink>
                         <Icon height={"24"} width={"24"} viewBox={"0 0 24 24"} iconId={"facebook"}/>
@@ -46,7 +47,8 @@ export const MobileMenu = (props: {menuItems: Array<string>}) => {
                         <Icon height={"24"} width={"24"} viewBox={"0 0 24 24"} iconId={"linkediIn"}/>
                     </SocialLink>
                 </SocialItem>
-            </SocialList>
+                </SocialList>
+            </MenuWrapper>
         </StyledMobileMenu>
     );
 };
@@ -109,16 +111,32 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
         }
     }
 `
-
-const MobileMenuPopup = styled.div<{isOpen: boolean}>`
+const MenuWrapper = styled.div<{isOpen: boolean}>`
     position: fixed;
     background-color: ${Theme.colors.burgerBg};
     right: 0;
     left: 0;
     top: 0;
     bottom: 0;
+    display: none;
+
+    ${props => props.isOpen && css<{isOpen: boolean}> `
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    `}
+`
+
+const MobileMenuPopup = styled.div<{isOpen: boolean}>`
+    position: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: ${Theme.colors.burgerBg};
+    width: 238px;
+    height: 179px;
     z-index: 99999;
     display: none;
+    margin-top: 25vh;
 
     ${props => props.isOpen && css<{isOpen: boolean}> `
         display: flex;
@@ -155,14 +173,14 @@ const Link = styled.a`
 `
 
 const SocialList = styled.ul<{isOpen: boolean}>`
-    position: absolute;
-    z-index: 99999;
     display: none;
-    top: 250px;
-        
+            
     ${props => props.isOpen && css<{isOpen: boolean}> `
         display: flex;
         gap: 12px;
+        padding: 10px 150px 10px 10px;
+        height: 41px;
+        width: 238px;
     `}
 `
 
