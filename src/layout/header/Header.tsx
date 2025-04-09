@@ -5,6 +5,7 @@ import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { Theme } from "../../styles/Theme";
 import { MobileMenu } from "./mobileMenu/MobileMenu";
+import { font } from "../../styles/Common";
 
 const items = ["Projects", "About", "Digital Assets"]
 
@@ -61,12 +62,6 @@ const Button = styled.button`
 `
 
 const Link = styled.a`
-    font-family: "Epilogue", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
+    ${font({family: "'Epilogue', sans-serif", weight: 400, Fmax: 16, Fmin: 12})};
     color: ${Theme.colors.mainFn};
-
-    @media ${Theme.media.mobile} {
-        font-size: 15px;
-    }
 `
