@@ -28,7 +28,7 @@ export const AboutMe = () => {
 
 const StyledAbout = styled.section`
     min-height: 1470px;
-    padding: 110px 200px 205px;
+    padding: 100px 200px 205px;
 
     position: relative;
 `

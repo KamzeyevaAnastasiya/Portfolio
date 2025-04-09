@@ -47,7 +47,7 @@ export const Skills = () => {
 };
 
 const StyledSkills = styled.section`
-    padding: 100px 50px 145px;
+    padding: 100px 50px;
 `
 
 const StyledList = styled.ol`

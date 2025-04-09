@@ -31,7 +31,7 @@ export const Contacts = () => {
 }
 
 const StyledContacts = styled.section`
-    padding: 80px 200px 64px;
+    padding: 100px 200px;
 `
 
 const Title = styled.h5`
