@@ -47,7 +47,7 @@ const StyledHeader = styled.header`
 const Button = styled.button`
     background-color: ${Theme.colors.primaryFn};
     padding: 8px 20px;
-    width: 111px;
+    width: 112px;
     height: 40px;
     margin-left: 32px;
 
@@ -56,8 +56,8 @@ const Button = styled.button`
     }
 
     @media ${Theme.media.mobile} {
-        width: 107px;
-        height: 39px;
+        width: 108px;
+        height: 38px;
     }
 `
 
