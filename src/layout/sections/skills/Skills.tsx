@@ -3,6 +3,7 @@ import { FlexWrapper } from "../../../components/FlexWrapper"
 import { Skill } from "./skill/Skill"
 import { Container } from "../../../components/Container";
 import { Theme } from "../../../styles/Theme";
+import { font } from "../../../styles/Common";
 
 export const Skills = () => {
     return (
@@ -47,7 +48,7 @@ export const Skills = () => {
 };
 
 const StyledSkills = styled.section`
-    padding: 100px 50px;
+    padding: 100px 40px;
 `
 
 const StyledList = styled.ol`
@@ -55,6 +56,7 @@ const StyledList = styled.ol`
     counter-reset: item;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 `
 
 const StyledLi = styled.li`
@@ -64,10 +66,8 @@ const StyledLi = styled.li`
 
     &::before {
         content: '0' counter(item) '.'; 
+        ${font({family: "'Epilogue', sans-serif", weight: 100, Fmax: 65, Fmin: 45})};
         counter-increment: item;
-        font-family: "Epilogue", sans-serif;
-        font-weight: 100;
-        font-size: 70px;
         color: ${Theme.colors.mainFn};
         position: absolute;
         top: 15px;
@@ -75,4 +75,8 @@ const StyledLi = styled.li`
         transform: translateX(50%);
     }
 
+    @media ${Theme.media.mobile} {
+        margin-left: 80px;
+        margin-bottom: 40px;
+    }
 `
