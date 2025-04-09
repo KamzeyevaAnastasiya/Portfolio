@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { Theme } from "../../../styles/Theme";
+import { font } from "../../../styles/Common";
 
 export const HeaderMenu = (props: {menuItems: Array<string>}) => {
     return (
@@ -31,9 +32,6 @@ const ListItem = styled.li`
 `
 
 const Link = styled.a`
-    font-family: "Epilogue", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
+    ${font({family: "'Epilogue', sans-serif", weight: 400, lineHeight: 1.5, Fmax: 16, Fmin: 13})};
     color: ${Theme.colors.primaryFn};
 `
