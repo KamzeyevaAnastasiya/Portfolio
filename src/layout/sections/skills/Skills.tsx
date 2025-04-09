@@ -57,6 +57,7 @@ const StyledList = styled.ol`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    gap: 5px;
 `
 
 const StyledLi = styled.li`
