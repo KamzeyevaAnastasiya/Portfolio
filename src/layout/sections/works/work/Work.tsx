@@ -58,29 +58,26 @@ const ImageWrapper = styled.div`
     }
 `
 
-const Wrapper = styled.div`
-    position: absolute;
-    top: 20%;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    width: 100%;
-    gap: 5px;
-    margin-left: 10px;
-    
-    @media ${Theme.media.tablet} {
-        top: 10%;
-    }
-`
-
 const Image = styled.img`
-    max-width: 1000px;
     width: 100%;
     min-height: 447px;
     object-fit: cover;
 
-    @media ${Theme.media.tablet} { 
+    @media ${Theme.media.desktop} { 
         min-height: 620px; 
+    }
+`
+
+const Wrapper = styled.div`
+    position: absolute;
+    top: 25%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    
+    @media ${Theme.media.tablet} {
+        top: 15%;
     }
 `
 
@@ -93,23 +90,25 @@ const Category = styled.h5`
     ${font({family: "'Epilogue', sans-serif", weight: 600, lineHeight: 1.5, Fmax: 16, Fmin: 15})};
     color: ${Theme.colors.mainFn};
     margin-bottom: 16px;
-
+    margin-left: 10px;
 `
 
 const TitlePart1 = styled.h3`
     ${font({family: "'Epilogue', sans-serif", weight: 200, Fmax: 42, Fmin: 36})};
     color: ${Theme.colors.mainFn};
+    margin-left: 10px;
 `
 
 const TitlePart2 = styled.h3`
     ${font({family: "'Epilogue', sans-serif", weight: 800, Fmax: 42, Fmin: 36})};
     color: ${Theme.colors.mainFn};
+    margin-left: 10px;
 `
 
 const TextWrapper = styled.div`
-    max-width: 434px;
+    max-width: 430px;
     width: 100%;
-    margin-top: 30px;
+    margin-top: 50px;
 
     @media ${Theme.media.tablet} { 
         margin-top: 24px;
@@ -119,4 +118,5 @@ const TextWrapper = styled.div`
 const Text = styled.p`
     ${font({family: "'Epilogue', sans-serif", weight: 400, lineHeight: 1.5,Fmax: 18, Fmin: 15})};
     color: ${Theme.colors.mainFn};
+    margin-left: 10px;
 `
