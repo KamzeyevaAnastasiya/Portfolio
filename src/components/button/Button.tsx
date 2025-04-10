@@ -30,6 +30,10 @@ const Text = styled.p`
     font-size: 16px;
     line-height: 1.5;
     color: ${Theme.colors.mainFn};
+
+    @media ${Theme.media.desktop} {
+        font-size: 15px;
+    }
 `
 
 const Link = styled.a`
