@@ -6,6 +6,7 @@ import fashionImg from '../../../assets/images/proj-2.webp'
 import barbequeImg from '../../../assets/images/proj-3.webp'
 import { Theme } from "../../../styles/Theme"
 import { Container } from "../../../components/Container"
+import { font } from "../../../styles/Common"
 
 export const Works = () => {
     return (
@@ -38,12 +39,13 @@ export const Works = () => {
 
 const StyledWorks = styled.section`
     padding: 100px 200px;
+
+    @media ${Theme.media.mobile} {
+        margin: 100px auto;
+    }
 `
 
 const WorksTitle = styled.h2`
-    font-family: "Epilogue", sans-serif;
-    font-weight: 800;
-    font-size: 120px;
-    line-height: 0.9;
+    ${font({family: "'Epilogue', sans-serif", weight: 800, lineHeight: 0.9, Fmax: 120, Fmin: 60})};
     color: ${Theme.colors.primaryFn};
 `
