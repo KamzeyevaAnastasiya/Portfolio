@@ -11,11 +11,11 @@ export const Contacts = () => {
     return (
         <StyledContacts>
             <Container>
-                <FlexWrapper justify="space-between">
-                    <div>
+                <FlexWrapper justify={"space-around"} wrap={"wrap"}>
+                    <LogoWrapper>
                         <Logo/>
                         <ContactsMenu menuItems={contactsItems}/>
-                    </div>
+                    </LogoWrapper>
                     <div>
                         <Title>Subscribe to my emailing list</Title>
                         <StyledForm>
@@ -34,6 +34,22 @@ const StyledContacts = styled.section`
     padding: 100px 200px;
 `
 
+const LogoWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 360px;
+    width: 100%;
+
+    @media ${Theme.media.desktop} {
+        flex-direction: row;
+    }
+
+    @media ${Theme.media.mobile} {
+        flex-direction: column;
+    }
+`
+
 const Title = styled.h5`
     font-family: "Epilogue", sans-serif;
     font-weight: 700;
@@ -41,15 +57,24 @@ const Title = styled.h5`
     line-height: 1.5;
     color: ${Theme.colors.secondaryFn};
     margin-top: 12px;
+
+    @media ${Theme.media.tablet} {
+        margin-top: 26px;
+    }
 `
 
 const StyledForm = styled.form`
     max-width: 400px;
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     gap: 16px;
     margin: 16px 0;
+
+    @media ${Theme.media.desktop} {
+        
+    }
 `
 
 const Field = styled.input`
@@ -70,6 +95,11 @@ const Field = styled.input`
 
     &:focus-visible {
         outline: 1px solid ${Theme.colors.secondaryFn};
+    }
+
+    @media ${Theme.media.mobile} {
+        max-width: 328px;
+        width: 100%;
     }
 `
 
