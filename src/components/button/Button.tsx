@@ -17,7 +17,7 @@ const StyledBtn = styled.p`
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     width: 105px;
     height: 40px;
     gap: 4px;
