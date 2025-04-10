@@ -1,6 +1,8 @@
 import styled from "styled-components"
 import { StyledButton } from "../../../../components/button/Button"
 import { Theme } from "../../../../styles/Theme"
+import { font } from "../../../../styles/Common"
+import { FlexWrapper } from "../../../../components/FlexWrapper"
 
 type WorkPropsType = {
     category: string
@@ -17,17 +19,18 @@ export const Work = (props: WorkPropsType) => {
                 <Image src={props.src} alt=""/>
             </ImageWrapper>
             
-            <TitleWrapper>
-                <Category>{props.category}</Category>
-                <TitlePart1>{props.titlePart1}</TitlePart1>
-                <TitlePart2>{props.titlePart2}</TitlePart2>
-            </TitleWrapper>
-            
-            <TextWrapper>
-                <Text>{props.text}</Text>
-                <StyledButton/>
-            </TextWrapper>
-            
+            <FlexWrapper>
+                <TitleWrapper>
+                    <Category>{props.category}</Category>
+                    <TitlePart1>{props.titlePart1}</TitlePart1>
+                    <TitlePart2>{props.titlePart2}</TitlePart2>
+                </TitleWrapper>
+                
+                <TextWrapper>
+                    <Text>{props.text}</Text>
+                    <StyledButton/>
+                </TextWrapper>
+            </FlexWrapper>
         </StyledWork>
     );
 };
@@ -35,6 +38,15 @@ export const Work = (props: WorkPropsType) => {
 const StyledWork = styled.div`
     margin-top: 80px;
     position: relative;
+
+    @media ${FlexWrapper} {
+        position: absolute;
+        top: 20%;
+    }
+
+    @media ${Theme.media.mobile} {
+        margin-top: 60px;
+    }
 `
 
 const ImageWrapper = styled.div`
@@ -53,58 +65,58 @@ const ImageWrapper = styled.div`
 `
 
 const Image = styled.img`
+    max-width: 1040px;
     width: 100%;
-    height: 447px;
+    min-height: 447px;
     object-fit: cover;
 `
 
 const TitleWrapper = styled.div`
-    width: 433px;
-    min-height: 202px;
-    
-    position: absolute;
-    left: 45px;
-    top: 90px;
+    width: 100%;
+    min-height: 270px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-around;
+
 `
 
 const Category = styled.h5`
-    font-family: "Epilogue", sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 1.5;
+    ${font({family: "'Epilogue', sans-serif", weight: 600, lineHeight: 1.5, Fmax: 16, Fmin: 15})};
     color: ${Theme.colors.mainFn};
     margin-bottom: 16px;
+
+    @media ${Theme.media.desktop} {
+        margin-bottom: 14px;
+    }
 `
 
 const TitlePart1 = styled.h3`
-    font-family: "Epilogue", sans-serif;
-    font-weight: 200;
-    font-size: 45px;
+    ${font({family: "'Epilogue', sans-serif", weight: 200, Fmax: 45, Fmin: 40})};
     color: ${Theme.colors.mainFn};
+    max-width: 440px;
 `
 
 const TitlePart2 = styled.h3`
-    font-family: "Epilogue", sans-serif;
-    font-weight: 800;
-    font-size: 45px;
+    ${font({family: "'Epilogue', sans-serif", weight: 800, Fmax: 45, Fmin: 40})};
     color: ${Theme.colors.mainFn};
+    max-width: 440px;
+    
 `
 
 const TextWrapper = styled.div`
-    width: 433px;
-    min-height: 215px;
-    
-    position: absolute;
-    right: 45px;
-    top: 130px;
+
 `
 
 const Text = styled.p`
-    font-family: "Epilogue", sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.5;
+    ${font({family: "'Epilogue', sans-serif", weight: 400, lineHeight: 1.5,Fmax: 18, Fmin: 17})};
     color: ${Theme.colors.mainFn};
-    margin-bottom: 40px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    max-width: 440px;
+
+    @media ${Theme.media.desktop} {
+        margin-top: 20px;
+    }
 `
 
