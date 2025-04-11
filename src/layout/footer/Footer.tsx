@@ -41,6 +41,10 @@ export const Footer = () => {
 const StyledFooter = styled.footer`
     background-color: ${Theme.colors.primaryBg};
     padding: 64px 200px 55px;
+
+    @media ${Theme.media.mobile} {
+        padding: 30px 10px;
+    }
 `
 
 const Copyright = styled.small`
@@ -49,6 +53,10 @@ const Copyright = styled.small`
     font-size: 14px;
     line-height: 1.5;
     color: ${Theme.colors.secondaryFn};
+
+    @media ${Theme.media.tablet} {
+        width: 200px;
+    }
 `
 
 const SocialList = styled.ul`
