@@ -35,7 +35,7 @@ const StyledHeader = styled.header`
     left: 0;
     z-index: 99999;
 
-    @media ${Theme.media.tablet} {
+    @media ${Theme.media.desktop} {
         padding: 20px 105px;
     }
 
