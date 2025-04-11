@@ -43,11 +43,6 @@ const TitleWrapper = styled.div`
     @media ${Theme.media.tablet} {
         align-items: center;
     }
-
-    @media ${Theme.media.mobile} {
-        align-items: flex-start;
-    }
-    
 `
 const Title = styled.h5`
     font-family: "Epilogue", sans-serif;
@@ -90,10 +85,6 @@ const TextWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    @media ${Theme.media.mobile} {
-        align-items: flex-start;
-    }
 `
 
 const Text = styled.p`
