@@ -39,10 +39,6 @@ export const Works = () => {
 
 const StyledWorks = styled.section`
     padding: 100px 200px;
-
-    @media ${Theme.media.mobile} {
-        margin: 100px auto;
-    }
 `
 
 const WorksTitle = styled.h2`
