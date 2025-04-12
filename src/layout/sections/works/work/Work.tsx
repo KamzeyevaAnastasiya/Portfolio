@@ -62,6 +62,7 @@ const Image = styled.img`
     width: 100%;
     min-height: 447px;
     object-fit: cover;
+    border: 1px solid #000;
 
     @media ${Theme.media.desktop} { 
         min-height: 620px; 
@@ -70,7 +71,7 @@ const Image = styled.img`
 
 const Wrapper = styled.div`
     position: absolute;
-    top: 25%;
+    top: 20%;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -108,7 +109,7 @@ const TitlePart2 = styled.h3`
 const TextWrapper = styled.div`
     max-width: 430px;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 34px;
 
     @media ${Theme.media.tablet} { 
         margin-top: 24px;

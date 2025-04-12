@@ -67,12 +67,12 @@ const StyledLi = styled.li`
 
     &::before {
         content: '0' counter(item) '.'; 
-        ${font({family: "'Epilogue', sans-serif", weight: 100, Fmax: 65, Fmin: 45})};
+        ${font({family: "'Epilogue', sans-serif", weight: 100, Fmax: 70, Fmin: 45})};
         counter-increment: item;
         color: ${Theme.colors.mainFn};
         position: absolute;
-        top: 15px;
-        left: -50%;
+        top: 7px;
+        left: -45%;
         transform: translateX(50%);
     }
 

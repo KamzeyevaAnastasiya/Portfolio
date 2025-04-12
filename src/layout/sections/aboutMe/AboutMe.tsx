@@ -31,7 +31,7 @@ export const AboutMe = () => {
 };
 
 const StyledAbout = styled.section`
-    padding: 100px 200px 205px;
+    padding: 130px 200px 205px;
 `
 
 const TitleWrapper = styled.div`

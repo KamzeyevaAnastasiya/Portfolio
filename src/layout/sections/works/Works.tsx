@@ -38,7 +38,7 @@ export const Works = () => {
 };
 
 const StyledWorks = styled.section`
-    padding: 100px 200px;
+    padding: 120px 200px;
 `
 
 const WorksTitle = styled.h2`
