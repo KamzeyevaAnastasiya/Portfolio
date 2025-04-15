@@ -23,6 +23,7 @@ const StyledBtn = styled.p`
     gap: 4px;
     padding: 8px 0px;
     margin-top: 48px;
+    margin-left: 10px;
 `
 
 const Text = styled.p`
