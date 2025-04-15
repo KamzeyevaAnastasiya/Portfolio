@@ -1,83 +1,52 @@
-import styled from "styled-components"
 import { FlexWrapper } from "../../../components/FlexWrapper"
 import { Skill } from "./skill/Skill"
 import { Container } from "../../../components/Container";
-import { Theme } from "../../../styles/Theme";
-import { font } from "../../../styles/Common";
+import { S } from "./Skills_Styles";
 
-export const Skills = () => {
+const skillData = [
+    {
+        title: "React",
+        text: "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue"
+    },
+    {
+        title: "Styled Components",
+        text: "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue"
+    },
+    {
+        title: "Figma",
+        text: "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue"
+    },
+    {
+        title: "HTML",
+        text: "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue"
+    },
+    {
+        title: "CSS",
+        text: "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue"
+    },
+    {
+        title: "TypeScript",
+        text: "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue"
+    },
+]
+
+export const Skills: React.FC = () => {
     return (
-        <StyledSkills>
+        <S.Skills>
             <Container>
                 <FlexWrapper wrap={"wrap"}>
-                    <StyledList>
-                        <StyledLi>
-                            <Skill title={"React"}
-                            text={"consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue"}/>
-                        </StyledLi>
-
-                        <StyledLi>
-                            <Skill title={"Styled Components"}
-                            text={"consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue"}/>
-                        </StyledLi>
-                            
-                        <StyledLi>
-                            <Skill title={"Figma"}
-                            text={"consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue"}/>
-                        </StyledLi>
-                            
-                        <StyledLi>
-                            <Skill title={"HTML"}
-                            text={"consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue"}/>
-                        </StyledLi>
-                            
-                        <StyledLi>
-                            <Skill title={"CSS"}
-                            text={"consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue"}/>
-                        </StyledLi>
-
-                        <StyledLi>
-                            <Skill title={"TypeScript"}
-                            text={"consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue"}/>
-                        </StyledLi>
-                    </StyledList>
+                    <S.List>
+                        {skillData.map((s, index) => {
+                            return (
+                                <S.Li>
+                                    <Skill title={s.title} key={index}
+                                    text={s.text}/>
+                                </S.Li>
+                            )
+                        })}
+                    </S.List>
                 </FlexWrapper>
             </Container>
-        </StyledSkills>
+        </S.Skills>
     );
 };
-
-const StyledSkills = styled.section`
-    padding: 100px 40px;
-`
-
-const StyledList = styled.ol`
-    list-style-type: none;
-    counter-reset: item;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 5px;
-`
-
-const StyledLi = styled.li`
-    margin-left: 115px;
-    position: relative;
-    margin-bottom: 60px;
-
-    &::before {
-        content: '0' counter(item) '.'; 
-        ${font({family: "'Epilogue', sans-serif", weight: 100, Fmax: 70, Fmin: 45})};
-        counter-increment: item;
-        color: ${Theme.colors.mainFn};
-        position: absolute;
-        top: 7px;
-        left: -45%;
-        transform: translateX(50%);
-    }
-
-    @media ${Theme.media.mobile} {
-        margin-left: 80px;
-        margin-bottom: 40px;
-    }
-`
