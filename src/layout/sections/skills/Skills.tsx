@@ -38,8 +38,8 @@ export const Skills: React.FC = () => {
                     <S.List>
                         {skillData.map((s, index) => {
                             return (
-                                <S.Li>
-                                    <Skill title={s.title} key={index}
+                                <S.Li key={index}>
+                                    <Skill title={s.title} 
                                     text={s.text}/>
                                 </S.Li>
                             )
