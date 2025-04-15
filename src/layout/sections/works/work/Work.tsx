@@ -1,4 +1,4 @@
-import { StyledButton } from "../../../../components/button/Button"
+import { Button } from "../../../../components/button/Button"
 import { S } from "../Works_Styles"
 
 type WorkPropsType = {
@@ -25,7 +25,7 @@ export const Work: React.FC<WorkPropsType> = (props: WorkPropsType) => {
                 
                 <S.TextWrapper>
                     <S.Text>{props.text}</S.Text>
-                    <StyledButton/>
+                    <Button/>
                 </S.TextWrapper>
             </S.Wrapper>
         </S.Work>
