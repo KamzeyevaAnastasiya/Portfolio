@@ -6,7 +6,7 @@ const Main = styled.section`
     min-height: 100vh;
     padding: 150px 105px 100px;
     
-    @media ${Theme.media.mobile} {
+    @media ${Theme.media.tablet} {
         padding-top: 120px !important;
     }
 `
@@ -19,6 +19,8 @@ const SectionTitle = styled.h2`
     ${font({family: "'Epilogue', sans-serif", weight: 800, Fmax: 90, Fmin: 50})};
     color: ${Theme.colors.primaryFn};
     text-align: left;
+    display: flex;
+    justify-content: center;
 `
 
 const TextPhoto = styled.img`
