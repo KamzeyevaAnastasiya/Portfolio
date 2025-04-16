@@ -4,6 +4,7 @@ import { Theme } from "../../../styles/Theme"
 
 const Works = styled.section`
     padding: 120px 200px;
+    position: relative;
 `
 
 const WorksTitle = styled.h2`

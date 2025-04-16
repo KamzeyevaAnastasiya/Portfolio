@@ -4,6 +4,7 @@ import { font } from "../../../styles/Common"
 
 const About = styled.section`
     padding: 130px 200px 205px;
+    position: relative;
 `
 
 const TitleWrapper = styled.div`

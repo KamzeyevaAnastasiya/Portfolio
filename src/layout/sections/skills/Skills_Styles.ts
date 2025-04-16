@@ -4,6 +4,7 @@ import { Theme } from "../../../styles/Theme"
 
 const Skills = styled.section`
     padding: 100px 40px;
+    position: relative;
 `
 
 const List = styled.ol`
