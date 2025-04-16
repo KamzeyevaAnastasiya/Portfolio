@@ -5,7 +5,6 @@ import { Container } from "../../../components/Container"
 import { S } from "./Contacts_Styles"
 import React from "react"
 
-const contactsItems = ["Projects", "About", "Digital Assets"]
 
 export const Contacts: React.FC = () => {
     return (
@@ -14,7 +13,7 @@ export const Contacts: React.FC = () => {
                 <FlexWrapper justify={"space-around"} wrap={"wrap"}>
                     <S.LogoWrapper>
                         <Logo/>
-                        <ContactsMenu menuItems={contactsItems}/>
+                        <ContactsMenu/>
                     </S.LogoWrapper>
                     <div>
                         <S.Title>Subscribe to my emailing list</S.Title>

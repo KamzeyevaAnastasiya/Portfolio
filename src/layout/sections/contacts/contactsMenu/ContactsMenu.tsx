@@ -1,12 +1,27 @@
 import { S } from "../Contacts_Styles";
 
-export const ContactsMenu: React.FC<{menuItems: Array<string>}> = (props: {menuItems: Array<string>}) => {
+const items = [
+    {
+        title: "Projects",
+        href: "projects"
+    },
+    {
+        title: "About",
+        href: "about"
+    },
+    {
+        title: "Digital Assets",
+        href: "digital assets"
+    },
+]
+
+export const ContactsMenu: React.FC = () => {
     return (
         <S.ContactsMenu>
             <ul>
-                {props.menuItems.map((item:string, index:number)=>{
+                {items.map((item, index)=>{
                     return <li key={index}>
-                        <S.Link href="">{item}</S.Link>
+                        <S.Link href={`#${item.href}`}>{item.title}</S.Link>
                     </li>
                 })}
             </ul>
