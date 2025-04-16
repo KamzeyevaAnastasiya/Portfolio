@@ -5,7 +5,7 @@ import { S } from "./AboutMe_Styles";
 
 export const AboutMe: React.FC = () => {
     return (
-        <S.About>
+        <S.About id={"about"}>
             <Container>
                 <FlexWrapper justify={"space-around"} wrap={"wrap"}>
                     <S.TitleWrapper>

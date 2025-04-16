@@ -1,12 +1,27 @@
 import { S } from "../Header_Styles";
 
-export const DesktopMenu: React.FC<{menuItems: Array<string>}> = (props: {menuItems: Array<string>}) => {
+const items = [
+    {
+        title: "Projects",
+        href: "projects"
+    },
+    {
+        title: "About",
+        href: "about"
+    },
+    {
+        title: "Digital Assets",
+        href: "digital assets"
+    },
+]
+
+export const DesktopMenu: React.FC = () => {
     return (
         <S.DesktopMenu>
             <ul>
-                {props.menuItems.map((item:string, index:number)=>{
+                {items.map((item, index) => {
                     return <li key={index}>
-                        <S.DesktopLink href="">{item}</S.DesktopLink>
+                        <S.DesktopLink href={`#${item.href}`}>{item.title}</S.DesktopLink>
                     </li>
                 })}
             </ul>

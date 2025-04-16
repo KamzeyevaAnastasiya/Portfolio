@@ -19,7 +19,7 @@ const socialData = [
 
 export const Footer = () => {
     return (
-        <S.Footer>
+        <S.Footer id={"digital assets"}>
             <FlexWrapper justify={"space-between"}>
                 <S.Copyright>2025 Anastasiya Kamzeyeva. All rights reserved.</S.Copyright>
                 <S.SocialList>

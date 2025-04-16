@@ -33,7 +33,7 @@ const worksData = [
 
 export const Works: React.FC = () => {
     return (
-        <S.Works>
+        <S.Works id={"projects"}>
             <Container>
                 <S.WorksTitle>MY<br/>PROJECTS</S.WorksTitle>
                 <FlexWrapper direction={"column"}>

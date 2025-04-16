@@ -2,7 +2,22 @@ import { S } from "../Header_Styles";
 import { Icon } from "../../../components/icon/Icon";
 import { useState } from "react";
 
-export const MobileMenu: React.FC<{menuItems: Array<string>}> = (props: {menuItems: Array<string>}) => {
+const items = [
+    {
+        title: "Projects",
+        href: "projects"
+    },
+    {
+        title: "About",
+        href: "about"
+    },
+    {
+        title: "Digital Assets",
+        href: "digital assets"
+    },
+]
+
+export const MobileMenu: React.FC = () => {
     const [menuIsOpen, setmenuIsOpen] = useState(false)
     const onBurgerBtnClick = () => { setmenuIsOpen( !menuIsOpen ) } 
     return (
@@ -14,10 +29,10 @@ export const MobileMenu: React.FC<{menuItems: Array<string>}> = (props: {menuIte
             <S.MenuWrapper isOpen={menuIsOpen} onClick={ () => {setmenuIsOpen(false)} }>
                 <S.MobileMenuPopup isOpen={menuIsOpen}>
                 <ul>
-                    {props.menuItems.map((item:string, index:number)=>{
+                    {items.map((item, index)=>{
                         return <li key={index}>
                             <S.LinkWrapper>
-                                <S.MobileLink href="">{item}</S.MobileLink>
+                                <S.MobileLink href={`#${item.href}`}>{item.title}</S.MobileLink>
                             </S.LinkWrapper>
                         </li>
                         })

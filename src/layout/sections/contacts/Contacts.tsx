@@ -9,7 +9,7 @@ const contactsItems = ["Projects", "About", "Digital Assets"]
 
 export const Contacts: React.FC = () => {
     return (
-        <S.Contacts>
+        <S.Contacts id={"talk"}>
             <Container>
                 <FlexWrapper justify={"space-around"} wrap={"wrap"}>
                     <S.LogoWrapper>
