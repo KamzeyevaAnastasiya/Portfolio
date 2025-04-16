@@ -1,15 +1,18 @@
 import { S } from "../Header_Styles";
 import { Icon } from "../../../components/icon/Icon";
+import { useState } from "react";
 
 export const MobileMenu: React.FC<{menuItems: Array<string>}> = (props: {menuItems: Array<string>}) => {
+    const [menuIsOpen, setmenuIsOpen] = useState(false)
+    const onBurgerBtnClick = () => { setmenuIsOpen( !menuIsOpen ) } 
     return (
         <S.MobileMenu>
-            <S.BurgerButton isOpen={false}>
+            <S.BurgerButton isOpen={menuIsOpen} onClick={onBurgerBtnClick}>
                 <span></span>
             </S.BurgerButton>
             
-            <S.MenuWrapper isOpen={false}>
-                <S.MobileMenuPopup isOpen={false}>
+            <S.MenuWrapper isOpen={menuIsOpen} onClick={ () => {setmenuIsOpen(false)} }>
+                <S.MobileMenuPopup isOpen={menuIsOpen}>
                 <ul>
                     {props.menuItems.map((item:string, index:number)=>{
                         return <li key={index}>
@@ -22,7 +25,7 @@ export const MobileMenu: React.FC<{menuItems: Array<string>}> = (props: {menuIte
                 </ul>
                 </S.MobileMenuPopup>
 
-                <S.SocialList isOpen={false}>
+                <S.SocialList isOpen={menuIsOpen}>
                 <li>
                     <S.SocialLink>
                         <Icon height={"24"} width={"24"} viewBox={"0 0 24 24"} iconId={"facebook"}/>
