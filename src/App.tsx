@@ -7,6 +7,7 @@ import { Contacts } from './layout/sections/contacts/Contacts';
 import { Main } from './layout/sections/main/Main';
 import { Skills } from './layout/sections/skills/Skills';
 import { Works } from './layout/sections/works/Works';
+import { GoToBtn } from './components/goToBtn/GoToBtn';
 
 function App() {
     return (
@@ -19,6 +20,7 @@ function App() {
             <AboutMe/>
             <Contacts/>
             <Footer/>
+            <GoToBtn/>
         </div>
     );
 };
