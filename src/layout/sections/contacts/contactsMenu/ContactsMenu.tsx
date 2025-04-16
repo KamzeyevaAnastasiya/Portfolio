@@ -21,7 +21,11 @@ export const ContactsMenu: React.FC = () => {
             <ul>
                 {items.map((item, index)=>{
                     return <li key={index}>
-                        <S.Link href={`#${item.href}`}>{item.title}</S.Link>
+                        <S.ContactsLink 
+                        to={item.href}
+                        smooth={true}
+                        >
+                        {item.title}</S.ContactsLink>
                     </li>
                 })}
             </ul>

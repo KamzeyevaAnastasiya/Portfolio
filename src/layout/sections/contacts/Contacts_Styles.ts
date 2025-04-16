@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import { Theme } from "../../../styles/Theme"
 import { font } from "../../../styles/Common"
+import { Link } from "react-scroll"
 
 const Contacts = styled.section`
     padding: 100px 200px;
@@ -120,7 +121,7 @@ const ContactsMenu = styled.nav`
     }
 `
 
-const Link = styled.a`
+const ContactsLink = styled(Link)`
     ${font({family: "'Epilogue', sans-serif", weight: 400, lineHeight: 1.5,  Fmax: 16, Fmin: 14})};
     color: ${Theme.colors.secondaryFn};
 `
@@ -134,5 +135,5 @@ export const S = {
     Button,
     Text,
     ContactsMenu,
-    Link,
+    ContactsLink,
 }
