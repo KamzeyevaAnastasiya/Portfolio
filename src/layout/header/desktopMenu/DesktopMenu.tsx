@@ -21,7 +21,11 @@ export const DesktopMenu: React.FC = () => {
             <ul>
                 {items.map((item, index) => {
                     return <li key={index}>
-                        <S.DesktopLink href={`#${item.href}`}>{item.title}</S.DesktopLink>
+                        <S.DesktopLink 
+                        to={item.href}
+                        smooth={true}
+                        >
+                        {item.title}</S.DesktopLink>
                     </li>
                 })}
             </ul>

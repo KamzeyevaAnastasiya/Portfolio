@@ -32,7 +32,12 @@ export const MobileMenu: React.FC = () => {
                     {items.map((item, index)=>{
                         return <li key={index}>
                             <S.LinkWrapper>
-                                <S.MobileLink href={`#${item.href}`}>{item.title}</S.MobileLink>
+                                <S.MobileLink 
+                                    to={item.href}
+                                    smooth={true}
+                                    offset={-80}
+                                    >
+                                    {item.title}</S.MobileLink>
                             </S.LinkWrapper>
                         </li>
                         })

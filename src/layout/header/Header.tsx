@@ -25,7 +25,7 @@ export const Header: React.FC = () => {
                     <Logo/>
                     <FlexWrapper align={"center"} >
                         {width < breakpoint ? <MobileMenu/> : <DesktopMenu/>}
-                        <S.Button><S.Link href="#talk">Let’s Talk</S.Link></S.Button>
+                        <S.Button><S.TalkLink href="#talk">Let’s Talk</S.TalkLink></S.Button>
                     </FlexWrapper>
                 </FlexWrapper>
             </Container>

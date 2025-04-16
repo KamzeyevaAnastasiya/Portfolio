@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components"
 import { Theme } from "../../styles/Theme"
 import { font } from "../../styles/Common"
+import { Link } from "react-scroll"
 
 const Header = styled.header`
     background-color: ${Theme.colors.primaryBg};
@@ -37,7 +38,7 @@ const Button = styled.button`
     }
 `
 
-const Link = styled.a`
+const TalkLink = styled.a`
     ${font({family: "'Epilogue', sans-serif", weight: 400, Fmax: 16, Fmin: 12})};
     color: ${Theme.colors.mainFn};
 `
@@ -49,7 +50,7 @@ const DesktopMenu = styled.nav`
     }
 `
 
-const DesktopLink = styled.a`
+const DesktopLink = styled(Link)`
     ${font({family: "'Epilogue', sans-serif", weight: 400, lineHeight: 1.5, Fmax: 16, Fmin: 13})};
     color: ${Theme.colors.primaryFn};
 `
@@ -157,7 +158,7 @@ const LinkWrapper = styled.div`
     text-align: left;
 `
 
-const MobileLink = styled.a`
+const MobileLink = styled(Link)`
     font-family: "Epilogue", sans-serif;
     font-weight: 400;
     font-size: 14px;
@@ -185,7 +186,7 @@ const SocialLink = styled.a`
 export const S = {
     Header,
     Button,
-    Link,
+    TalkLink,
     DesktopMenu,
     DesktopLink,
     MobileMenu,
