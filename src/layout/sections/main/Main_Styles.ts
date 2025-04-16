@@ -13,21 +13,25 @@ const Main = styled.section`
 
 const TitleWrapper = styled.div`
     max-width: 565px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    p {
+        display: none;
+    }
 `
 
 const SectionTitle = styled.h2`
     ${font({family: "'Epilogue', sans-serif", weight: 800, Fmax: 90, Fmin: 50})};
     color: ${Theme.colors.primaryFn};
-    text-align: left;
-    display: flex;
-    justify-content: center;
 `
 
-const TextPhoto = styled.img`
-    width: 80%;
-    height: 80%;
-    object-fit: cover;
+const MainTitle = styled.h1`
+    ${font({family: "'Epilogue', sans-serif", weight: 400, Fmax: 40, Fmin: 26})};
+    color: ${Theme.colors.primaryFn};
     margin-bottom: 40px;
+    margin-top: 20px;
 `
 
 const PhotoWrapper = styled.div`
@@ -78,7 +82,7 @@ export const S = {
     Main,
     TitleWrapper,
     SectionTitle,
-    TextPhoto,
+    MainTitle,
     PhotoWrapper,
     Photo,
 }
