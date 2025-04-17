@@ -34,4 +34,5 @@ const StyledGoToBtn = styled.button`
     position: fixed;
     right: 30px;
     bottom: 30px;
+    cursor: pointer;
 `

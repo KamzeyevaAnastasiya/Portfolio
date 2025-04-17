@@ -1,3 +1,5 @@
+import { S } from "../layout/footer/Footer_Styles";
+
 export const Theme = {
     colors: {
         primaryBg: "#ffffff",
@@ -19,5 +21,9 @@ export const Theme = {
         tablet: "screen and (max-width: 768px)",
         mobile: "screen and (max-width: 576px)",
         desktop: "screen and (max-width: 1440px)",
+    },
+
+    animations: {
+        transition: ".2s ease-in-out"
     }
 }

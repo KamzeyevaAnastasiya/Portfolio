@@ -116,38 +116,40 @@ const MenuWrapper = styled.div<{isOpen: boolean}>`
     left: 0;
     top: 0;
     bottom: 0;
-    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: 1s ease-in-out;
 
     ${props => props.isOpen && css<{isOpen: boolean}> `
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        transform: translateY(0);
     `}
 `
 
 const MobileMenuPopup = styled.div<{isOpen: boolean}>`
-    position: flex;
-    justify-content: center;
-    align-items: center;
     background-color: ${Theme.colors.burgerBg};
     width: 238px;
     height: 179px;
     z-index: 99999;
-    display: none;
     margin-top: 25vh;
-
-    ${props => props.isOpen && css<{isOpen: boolean}> `
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    `}
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
     ul {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 10px;
+        gap: 5px;
+        transition: 1s ease-in-out;
     }
+
+    ${props => props.isOpen && css<{isOpen: boolean}> `
+        & ul {
+        gap: 20px;
+        }
+    `}
 `
 
 const LinkWrapper = styled.div`
@@ -166,16 +168,13 @@ const MobileLink = styled(Link)`
     color: ${Theme.colors.primaryFn};
 `
 
-const SocialList = styled.ul<{isOpen: boolean}>`
-    display: none;
-            
-    ${props => props.isOpen && css<{isOpen: boolean}> `
-        display: flex;
-        gap: 12px;
-        padding: 10px 150px 10px 10px;
-        height: 41px;
-        width: 238px;
-    `}
+const SocialList = styled.ul`
+    display: flex;
+    gap: 12px;
+    padding: 10px 150px 10px 10px;
+    height: 41px;
+    width: 238px;
+    margin-top: 10px;
 `
 
 const SocialLink = styled.a`

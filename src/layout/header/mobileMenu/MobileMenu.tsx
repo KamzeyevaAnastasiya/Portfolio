@@ -45,7 +45,7 @@ export const MobileMenu: React.FC = () => {
                 </ul>
                 </S.MobileMenuPopup>
 
-                <S.SocialList isOpen={menuIsOpen}>
+                <S.SocialList>
                 <li>
                     <S.SocialLink>
                         <Icon height={"24"} width={"24"} viewBox={"0 0 24 24"} iconId={"facebook"}/>
