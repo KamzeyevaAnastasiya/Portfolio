@@ -1,4 +1,3 @@
-import { S } from "../layout/footer/Footer_Styles";
 
 export const Theme = {
     colors: {
