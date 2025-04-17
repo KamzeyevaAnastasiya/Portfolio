@@ -6,6 +6,7 @@ import barbequeImg from '../../../assets/images/proj-3.webp'
 import { Container } from "../../../components/Container"
 import { S } from "./Works_Styles"
 import React from "react"
+import { Fade } from "react-awesome-reveal"
 
 const worksData = [
     {
@@ -37,15 +38,17 @@ export const Works: React.FC = () => {
             <Container>
                 <S.WorksTitle>MY<br/>PROJECTS</S.WorksTitle>
                 <FlexWrapper direction={"column"}>
-                    {worksData.map((w, index) => {
-                        return (
-                            <Work src={w.src} key={index}
-                                category={w.category} 
-                                titlePart1={w.titlePart1}
-                                titlePart2={w.titlePart2}
-                                text={w.text}/>
-                        )
-                    })}
+                    <Fade cascade={true} damping={0.2}>
+                        {worksData.map((w, index) => {
+                            return (
+                                <Work src={w.src} key={index}
+                                    category={w.category} 
+                                    titlePart1={w.titlePart1}
+                                    titlePart2={w.titlePart2}
+                                    text={w.text}/>
+                            )
+                        })}
+                    </Fade>
                 </FlexWrapper>
             </Container>
         </S.Works>
