@@ -31,12 +31,13 @@ const ImageWrapper = styled.div`
         right: 0;
         top: 0;
         bottom: 0;
-        background: rgba(0, 0, 0, 0.8);
-        opacity: 0.6;
+        background: rgba(0, 0, 0, 0.48);
+        z-index: 1;
     }
 `
 
 const Image = styled.img`
+    display: block;
     width: 100%;
     min-height: 447px;
     object-fit: cover;
@@ -54,6 +55,7 @@ const Wrapper = styled.div`
     justify-content: space-around;
     flex-wrap: wrap;
     width: 100%;
+    z-index: 2;
     
     @media ${Theme.media.tablet} {
         top: 15%;
