@@ -1,6 +1,6 @@
 import styled from "styled-components"
-import { Theme } from "../../../styles/Theme"
-import { font } from "../../../styles/Common"
+import {Theme} from "../../../styles/Theme"
+import {font} from "../../../styles/Common"
 
 const About = styled.section`
     padding: 130px 200px 205px;
@@ -66,17 +66,18 @@ const Text = styled.p`
     font-size: 18px;
     line-height: 1.5;
     color: ${Theme.colors.aboutFn};
-    
+
     & + p {
-        margin-top: 1em; 
+        margin-top: 1em;
     }
 `
 
-const SecondImage = styled(Image)`
+const SecondImageWrapper = styled.div`
     margin-top: 204px;
     max-width: 440px;
     width: 100%;
-    max-height: 411px;
+    height: 411px;
+    overflow: hidden;
 
     @media ${Theme.media.desktop} {
         margin-top: 60px;
@@ -84,9 +85,19 @@ const SecondImage = styled(Image)`
 
     @media ${Theme.media.tablet} {
         max-width: 276px;
-        max-height: 258px;
+        height: 258px;
         margin-top: 60px;
     }
+`
+
+const SecondImage = styled(Image)`
+    margin-top: 0;
+    max-width: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.35);
+
 `
 
 export const S = {
@@ -97,5 +108,6 @@ export const S = {
     Image,
     TextWrapper,
     Text,
+    SecondImageWrapper,
     SecondImage,
 }
