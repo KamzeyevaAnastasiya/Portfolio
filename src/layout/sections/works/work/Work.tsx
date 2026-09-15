@@ -7,6 +7,7 @@ type WorkPropsType = {
     titlePart2: string
     text: string
     src: string
+    demoUrl: string
 }
 
 export const Work: React.FC<WorkPropsType> = (props: WorkPropsType) => {
@@ -25,7 +26,7 @@ export const Work: React.FC<WorkPropsType> = (props: WorkPropsType) => {
                 
                 <S.TextWrapper>
                     <S.Text>{props.text}</S.Text>
-                    <Button/>
+                    <Button href={props.demoUrl}/>
                 </S.TextWrapper>
             </S.Wrapper>
         </S.Work>
