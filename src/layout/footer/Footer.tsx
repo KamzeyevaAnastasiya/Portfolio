@@ -1,19 +1,19 @@
-import { FlexWrapper } from "../../components/FlexWrapper";
-import { S } from "./Footer_Styles";
-import { Icon } from "../../components/icon/Icon";
+import {FlexWrapper} from "../../components/FlexWrapper";
+import {S} from "./Footer_Styles";
+import {Icon} from "../../components/icon/Icon";
 
 const socialData = [
     {
-        iconId:"facebook",
+        iconId: "facebook",
     },
     {
-        iconId:"instagram",
+        iconId: "instagram",
     },
     {
-        iconId:"twitter",
+        iconId: "telegram",
     },
     {
-        iconId:"linkediIn",
+        iconId: "linkedin",
     }
 ]
 
