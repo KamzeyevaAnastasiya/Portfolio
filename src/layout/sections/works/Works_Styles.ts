@@ -44,7 +44,7 @@ const Image = styled.img`
     border: 1px solid #000;
 
     @media ${Theme.media.desktop} { 
-        min-height: 620px; 
+        height: 620px; 
     }
 `
 

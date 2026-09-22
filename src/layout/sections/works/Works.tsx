@@ -1,8 +1,8 @@
 import {FlexWrapper} from "../../../components/FlexWrapper"
 import {Work} from "./work/Work"
 import tmdbImg from '../../../assets/images/proj-1.webp'
-import fashionImg from '../../../assets/images/proj-2.webp'
-import barbequeImg from '../../../assets/images/proj-3.webp'
+import catchTheGoogleImg from '../../../assets/images/proj-2.webp'
+import todoListImg from '../../../assets/images/proj-3.webp'
 import {Container} from "../../../components/Container"
 import {S} from "./Works_Styles"
 import React from "react"
@@ -18,20 +18,20 @@ const worksData = [
         demoUrl: "https://github.com/KamzeyevaAnastasiya/tmdb-kinopoisk",
     },
     {
-        src: fashionImg,
-        category: "Fashion Show",
-        titlePart1: "A Case Study_",
-        titlePart2: "Enjoy Fashion Shows From Home",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
-        demoUrl: "https://github.com/KamzeyevaAnastasiya/tmdb-kinopoisk",
+        src: catchTheGoogleImg,
+        category: "Catch The Google",
+        titlePart1: "A Multiplayer Game_",
+        titlePart2: "Catch the Moving Google",
+        text: "A browser-based multiplayer game where two players compete to catch a moving Google icon. Built with JavaScript and WebSockets for real-time game synchronization, with configurable game settings and keyboard controls.",
+        demoUrl: "https://github.com/KamzeyevaAnastasiya/CatchTheGoogle",
     },
     {
-        src: barbequeImg,
-        category: "Barbeque",
-        titlePart1: "Branding_",
-        titlePart2: "Chicken Barbeque Never Goes Wrong",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
-        demoUrl: "https://github.com/KamzeyevaAnastasiya/tmdb-kinopoisk",
+        src: todoListImg,
+        category: "ToDo List",
+        titlePart1: "A Task Manager_",
+        titlePart2: "Organize Your Daily Tasks",
+        text: "A task management application built with React and TypeScript. The project focuses on reusable components, structured state management, and creating a clean and responsive user interface.",
+        demoUrl: "https://github.com/KamzeyevaAnastasiya/ToDoList",
     },
 ]
 
