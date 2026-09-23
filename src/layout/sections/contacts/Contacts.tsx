@@ -1,9 +1,9 @@
-import { ContactsMenu } from "./contactsMenu/ContactsMenu"
-import { Logo } from "../../../components/logo/Logo"
-import { FlexWrapper } from "../../../components/FlexWrapper"
-import { Container } from "../../../components/Container"
-import { S } from "./Contacts_Styles"
-import React, { ElementRef, useRef } from "react"
+import {ContactsMenu} from "./contactsMenu/ContactsMenu"
+import {Logo} from "../../../components/logo/Logo"
+import {FlexWrapper} from "../../../components/FlexWrapper"
+import {Container} from "../../../components/Container"
+import {S} from "./Contacts_Styles"
+import React, {ElementRef, useRef} from "react"
 import emailjs from '@emailjs/browser';
 
 export const Contacts: React.FC = () => {
@@ -11,22 +11,22 @@ export const Contacts: React.FC = () => {
     const form = useRef<ElementRef<'form'>>(null);
 
     const sendEmail = (e: any) => {
-    e.preventDefault();
+        e.preventDefault();
 
-if(!form.current) return
+        if (!form.current) return
 
-    emailjs
-        .sendForm('service_kjyfy1k', 'template_5hz1uu1', form.current, {
-        publicKey: 'rcjAvdEfDEUslFIqD',
-        })
-        .then(
-        () => {
-            console.log('SUCCESS!');
-        },
-        (error) => {
-            console.log('FAILED...', error.text);
-        },
-        );
+        emailjs
+            .sendForm('service_kjyfy1k', 'template_5hz1uu1', form.current, {
+                publicKey: 'rcjAvdEfDEUslFIqD',
+            })
+            .then(
+                () => {
+                    console.log('SUCCESS!');
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                },
+            );
         e.target.reset()
     };
 
