@@ -3,14 +3,14 @@ import {Logo} from "../../../components/logo/Logo"
 import {FlexWrapper} from "../../../components/FlexWrapper"
 import {Container} from "../../../components/Container"
 import {S} from "./Contacts_Styles"
-import React, {ElementRef, useRef} from "react"
+import React, {ElementRef, type FormEvent, useRef} from "react"
 import emailjs from '@emailjs/browser';
 
 export const Contacts: React.FC = () => {
 
     const form = useRef<ElementRef<'form'>>(null);
 
-    const sendEmail = (e: any) => {
+    const sendEmail = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         if (!form.current) return
@@ -22,12 +22,12 @@ export const Contacts: React.FC = () => {
             .then(
                 () => {
                     console.log('SUCCESS!');
+                    form.current?.reset()
                 },
                 (error) => {
                     console.log('FAILED...', error.text);
                 },
             );
-        e.target.reset()
     };
 
     return (
