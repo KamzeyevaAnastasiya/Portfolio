@@ -1,4 +1,5 @@
 import MyPhoto from '../../../assets/images/myPhoto.webp'
+import MyPhoto2 from '../../../assets/images/myPhoto2.webp'
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Container} from "../../../components/Container";
 import {S} from "./AboutMe_Styles";
@@ -11,7 +12,7 @@ export const AboutMe: React.FC = () => {
                     <S.TitleWrapper>
                         <S.Title>About Me</S.Title>
                         <S.Slogan>I look at usual <br/> things with my <br/> unsual eyes.</S.Slogan>
-                        <S.Image src={MyPhoto} alt=""></S.Image>
+                        <S.Image src={MyPhoto2} alt=""></S.Image>
                     </S.TitleWrapper>
 
                     <S.TextWrapper>

@@ -5,15 +5,19 @@ import {Icon} from "../../components/icon/Icon";
 const socialData = [
     {
         iconId: "facebook",
+        to: '#',
     },
     {
         iconId: "instagram",
+        to: '#',
     },
     {
         iconId: "telegram",
+        to: 'https://t.me/anastasiya_kamzeeva',
     },
     {
         iconId: "linkedin",
+        to: 'https://www.linkedin.com/in/anastasia-kamzeyeva-3964961ba',
     }
 ]
 
@@ -26,7 +30,7 @@ export const Footer = () => {
                     {socialData.map((s, index) => {
                         return (
                             <li key={index}>
-                                <S.SocialLink>
+                                <S.SocialLink href={s.to} target="_blank" rel="noopener noreferrer">
                                     <Icon height={"24"} width={"24"} viewBox={"0 0 24 24"} iconId={s.iconId}/>
                                 </S.SocialLink>
                             </li>
